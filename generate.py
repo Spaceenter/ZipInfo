@@ -17,6 +17,7 @@ template = """
     <thead>
       <tr>
         <th>Zip Code</th>
+        <th>Population</th>
         <th>A Ratio</th>
         <th>W Ratio</th>
         <th>B Ratio</th>
@@ -25,7 +26,7 @@ template = """
       </tr>
     </thead>
     <tbody>
-{}
+%s
     </tbody>
   </table>
 
@@ -33,7 +34,7 @@ template = """
 """
 
 s = '\n'
-with open("zip_info.csv", "r") as f:
+with open('zip_info.csv', 'r') as f:
   reader = csv.reader(f)
   for i, line in enumerate(reader):
     if i == 0:
@@ -60,4 +61,4 @@ with open("zip_info.csv", "r") as f:
     line_s += '</tr>\n'
     s += line_s
 
-print template.format(s)
+print(template % (s))
