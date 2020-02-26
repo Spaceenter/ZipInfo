@@ -25,6 +25,7 @@ with open('zip_info.csv', 'r') as f:
         line_s += ', '
       else:
         first = False
+        item = "\"%s\"" % item
       line_s += item
 
     if skip:
