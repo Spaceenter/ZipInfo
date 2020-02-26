@@ -1,5 +1,5 @@
 To generate:
 
 ```
-python3 generate.py > index.html
+python3 generate.py > zip_info.js
 ```
